@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100rem;
+    background-color: #ECF0F3;
+}
+a{
+    text-decoration-line: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 5px 5px 9px #D1D9E6,
+                -5px -5px 9px #ffffff,
+                2px 2px 5px #D1D9E6 inset,
+                -2px -2px 5px #ffffff inset;
+}
+
+.card-up{
+    box-shadow: 18px 18px 30px #D1D9E6,
+                    -18px -18px 30px #ffffff;
+}
+.card-down{
+    box-shadow: 18px 18px 30px #D1D9E6 inset,
+                    -18px -18px 30px #ffffff inset;
+}
+.container-navigation{
+    padding: 10px;
+    position: absolute;
+    width: 240px;
+    height: 356px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECF0F3;
+    ul{
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        li{
+            list-style: none;
+            a{
+                border-radius: 10px;
+                margin: 30px 0;
+                height: 47px;
+                width: 165px;
+                text-decoration-line: none;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                box-shadow: 18px 18px 30px #D1D9E6,
+                -18px -18px 30px #ffffff;
+            }
+        }
+    }
+}
+
+#hero{
+    width: 720px;
+    height: 490px;
+    background-color: #ECF0F3;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    .container{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .content-hero{
+            width: 587px !important;
+            height: 271px !important;
+            // align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            height: 47px;
+            width: 165px;
+            ul{
+                margin: 18px 0 0 0 ;
+                display: flex;
+                padding: 0;
+                li{
+                    list-style: none;
+                    &:nth-child(2){
+                        margin: 0 18px;
+                    }
+                    a{
+                        border-radius: 30px;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+            a.contact{
+                width: 96px;
+                height: 30px;
+                border-radius: 10px;
+                margin-top: 32px;
+            }
+            img.img-fluid{
+                margin-top: 120px;
+            }
+        }
+    }
+}
