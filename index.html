@@ -9,50 +9,70 @@
     <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="d-flex flex-row-reverse">
-            <div class="col-3 navigation">
-                <div class="container-navigation card-down">
+
+    <div class="d-flex justify-content-between w-100">
+        <div class="col-md-3 d-none d-md-block frame-nav">
+            <nav class="nav-container position-fixed">
+                <div class="brand">Wn.</div>
+                <div class="nav">
                     <ul>
-                        <li><a href="#" class=""> home </a></li>
-                        <li><a href="#" class=""> about </a></li>
-                        <li><a href="#" class=""> portfolio </a></li>
-                        <li><a href="#" class=""> contact </a></li>
+                        <li><a href="#" class=""> Home </a></li>
+                        <li><a href="#" class=""> About me </a></li>
+                        <li><a href="#" class=""> Skills </a></li>
+                        <li><a href="#" class=""> Portfolio </a></li>
+                        <li><a href="#" class=""> Contact </a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-9">
-                <section id="hero" class=" card-up">
-                    <div class="container">
-                        <div class="row content-hero">
-                            <div class="col-5 align-items-start">
-                                <h5>Hy..</h5>
-                                <h3>Fajar Hidayat</h3>
-                                <h6>im a Front-End Developer</h6>
-                                <ul>
-                                    <li><a href="#"><img src="assets/icons/facebook.svg" alt="" srcset=""></a></li>
-                                    <li><a href="#"><img src="assets/icons/instagram.svg" alt="" srcset=""></a></li>
-                                    <li><a href="#"><img src="assets/icons/github.svg" alt="" srcset=""></a></li>
-                                </ul>
-                                <a href="#" class="contact">Contact</a>
+            </nav>
+        </div>
+        <div class="col-12 col-md-9 container px-5">
+            <div class="d-flex flex-column align-items-center">
+                <section id="hero" style="height: 99vh;" class="w-75">
+                    <div class="container justify-content-between">
+                        <div class="d-flex flex-column flex-md-row w-100">
+                            <div class="col-md-5 col-12">
+                                <div class="flex-column">
 
+                                    <h5>Hy..</h5>
+                                    <h3>Fajar Hidayat</h3>
+                                    <h6>im a Front-End Developer</h6>
+                                    <ul>
+                                        <li><a href="#"><img src="assets/icons/facebook.svg" alt=""></a></li>
+                                        <li><a href="#"><img src="assets/icons/instagram.svg" alt=""></a></li>
+                                        <li><a href="#"><img src="assets/icons/github.svg" alt=""></a></li>
+                                    </ul>
+                                    <a href="#" class="contact">Contact</a>
+                                </div>
                             </div>
-                            <div class="col-7 align-items-end">
-                                <img src="assets/ilustration/hero.svg" alt="" srcset="" class="img-fluid">
+                            <div class="col-md-7 col-12 align-self-md-end ">
+                                <img src="assets/ilustration/hero.svg" alt="" class="img-fluid w-100">
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="about-me">
-                    <div class="card-up"></div>
-                    <div class="card-up"></div>
+                <section id="about-me" style="height: 99vh;" >
+                    <div class="container">
+                        <h2>About me</h2>
+                        <div class="d-flex w-100 flex-column flex-md-row justify-content-between">
+                            <div class="col-md-3 col-12 align-self-stretch">
+                                <div class="frame-img h-100 p-1 align-items-center justify-content-center">
+                                    <img src="assets/img/user.png" alt="Foto saya" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-12 mt-3 mt-md-0 align-self-stretch">
+                                <div class="about align-self-auto">
+                                    <div class="d-flex flex-column">
+                                        <p class="col-12 text-truncate" style="max-width: 100px;">Hai,Perkenalkan nama Saya Fajar Hidayat. Saya seorang programmer yang berfokus pada tampilan web ataupun mobile. saya suka pemograman sejak SMP namun benar-benar mempelajarinya sejak di bangku SMK. Saya orang yang suka mengulik hal baru, cepat belajar dan paham namun belum tentu dapat dikatakan ahli dalam bidang tersebut.</p>
+                                    </div>
+                                    <a href="#" class=" d-flex justify-content-center align-items-center">Download my CV</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <section id="portfoilo">
-                    <div class="card-down"></div>
-                </section>
-                <section id="contact">
-                    <div class="card-down"></div>
-                </section>
+                <section id="skills"></section>
+                <section id="portfoilo"></section>
+                <section id="contact"></section>
             </div>
         </div>
     </div>

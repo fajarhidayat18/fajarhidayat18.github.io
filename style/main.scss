@@ -1,3 +1,5 @@
+@import 'components/mixin';
+
 *{
     padding: 0;
     margin: 0;
@@ -7,63 +9,42 @@ body{
     height: 100rem;
     background-color: #ECF0F3;
 }
-a{
-    text-decoration-line: none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    box-shadow: 5px 5px 9px #D1D9E6,
-                -5px -5px 9px #ffffff,
-                2px 2px 5px #D1D9E6 inset,
-                -2px -2px 5px #ffffff inset;
+.frame-nav{
+    width: 352px !important;
+    height: 100vh;
 }
-
-.card-up{
-    box-shadow: 18px 18px 30px #D1D9E6,
-                    -18px -18px 30px #ffffff;
-}
-.card-down{
-    box-shadow: 18px 18px 30px #D1D9E6 inset,
-                    -18px -18px 30px #ffffff inset;
-}
-.container-navigation{
-    padding: 10px;
-    position: absolute;
-    width: 240px;
-    height: 356px;
-    border-radius: 20px;
+.nav-container{
+    position: fixed;
+    width: 352px;
+    // width: calc(100vw - calc(30rem + 40vw));
+    height:100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #ECF0F3;
+    box-shadow: 2.5px 2.5px 5px #D1D9E6 inset,
+                -2.5px -2.5px 5px #ffffff inset;
+    .brand{
+        position: absolute;
+        top: 3rem;
+    }
     ul{
         background-color: transparent;
         padding: 0;
         margin: 0;
         li{
-            list-style: none;
+            list-style: none !important;
+            margin: 0.8rem 0;
             a{
-                border-radius: 10px;
-                margin: 30px 0;
-                height: 47px;
-                width: 165px;
-                text-decoration-line: none;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                box-shadow: 18px 18px 30px #D1D9E6,
-                -18px -18px 30px #ffffff;
+                padding: 0.5rem 3rem;
+                @include btn(2.5px, 5px, 10px);
             }
         }
     }
 }
-
 #hero{
-    width: 720px;
-    height: 490px;
     background-color: #ECF0F3;
-    border-radius: 20px;
     align-items: center;
     display: flex;
     .container{
@@ -71,38 +52,62 @@ a{
         display: flex;
         justify-content: center;
         align-items: center;
-        .content-hero{
-            width: 587px !important;
-            height: 271px !important;
-            // align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            height: 47px;
-            width: 165px;
-            ul{
-                margin: 18px 0 0 0 ;
-                display: flex;
-                padding: 0;
-                li{
-                    list-style: none;
-                    &:nth-child(2){
-                        margin: 0 18px;
-                    }
-                    a{
-                        border-radius: 30px;
-                        height: 30px;
-                        width: 30px;
-                    }
+        ul{
+            margin: 18px 0 0 0 ;
+            display: flex;
+            padding: 0;
+            li{
+                list-style: none;
+                &:nth-child(2){
+                    margin: 0 18px;
+                }
+                a{
+                    border-radius: 30px;
+                    height: 30px;
+                    width: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    @include btn(2.5px,5px,30px);
                 }
             }
-            a.contact{
-                width: 96px;
-                height: 30px;
-                border-radius: 10px;
-                margin-top: 32px;
+        }
+        a.contact{
+            width: 96px;
+            height: 30px;
+            margin-top: 32px;
+            justify-content: center;
+            align-items: center;
+            @include btn(2.5px,5px,10px);
+        }
+        
+    }
+}
+
+#about-me{
+    align-items: center;
+    display: flex;
+    .container{
+        h2{
+            margin-bottom: 25px;
+        }
+        .frame-img{
+            display: flex;
+            @include card(5px,10px,30px);
+            img{
+                border-radius: 50%;
             }
-            img.img-fluid{
-                margin-top: 120px;
+        }
+        .about{
+            padding: 25px 30px;
+            @include card(10px,20px,30px);
+            p{
+                font-size: 1em;
+            }
+            a{
+                margin-top: 24px;
+                padding: 0.5rem 1rem;
+                width: 10rem !important;
+                @include btn(2.5px,5px,10px)
             }
         }
     }

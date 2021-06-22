@@ -1,0 +1,28 @@
+$background-color:#ECF0F3;
+$font-color:#000000;
+
+@mixin card($shadow, $blur, $border) {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-clip: border-box;
+    word-wrap: break-word;
+    min-width: 0;
+    $light-shadow:-$shadow;
+    border-radius: $border;
+    box-shadow: $shadow $shadow $blur #D1D9E6,
+                $light-shadow $light-shadow $blur #ffffff,
+    // border: 1px solid rgba(0,0,0,.125);
+}
+
+@mixin btn($shadow, $blur, $border, $color: $font-color, $bg-color: $background-color) {
+    background-color: $bg-color;
+    color: $color;
+    text-decoration-line: none;
+    align-items: center;
+    display: flex;
+    $light-shadow:-$shadow;
+    border-radius: $border;
+    box-shadow: $shadow $shadow $blur #D1D9E6,
+                $light-shadow $light-shadow $blur #ffffff,
+}
