@@ -1,5 +1,18 @@
 @import 'components/mixin';
 
+@media (max-width: 575.98px) { 
+    .truncate {
+        height: 10.5em;
+        // white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .link{
+          color: #67a1ff;
+          cursor: pointer;
+      }
+ }
+
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +21,8 @@
 body{
     height: 100rem;
     background-color: #ECF0F3;
+    overflow-x: hidden;
+    
 }
 .frame-nav{
     width: 352px !important;
@@ -43,6 +58,8 @@ body{
         }
     }
 }
+
+// content
 #hero{
     background-color: #ECF0F3;
     align-items: center;
@@ -94,7 +111,7 @@ body{
             display: flex;
             @include card(5px,10px,30px);
             img{
-                border-radius: 50%;
+                @include card(10px,30px, 50%);
             }
         }
         .about{
@@ -111,4 +128,88 @@ body{
             }
         }
     }
+}
+
+#skills{
+    margin-bottom: 10rem;
+    .nav{
+        margin-top: 25px;
+        ul{
+            display: flex;
+            padding: 0;
+            li{
+                list-style: none;
+                margin-right: 2rem;
+                a{
+                    width: 106px;
+                    height: 33px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include btn(2.5px,5px,10px);
+                }
+            }
+        }
+    }
+    .content-skills{
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .skill{
+            width: 100px;
+            height: 100px;
+            margin: 1em 0;
+            @include card(2.5px,5px,10px)
+        }
+    }
+}
+
+#portfolio{
+    .list{
+        margin-top: 2.3em;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        .card-p{
+            margin: 0.5em;
+            padding: 1rem;
+            @include card(15px,30px,10px);
+            // &:hover{
+            //     // width:100px;
+            // }
+            .figure{
+                width: auto;
+                height: 171px;
+                display: flex;
+                padding: 0.5em 0.5em;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 2.5px 2.5px 5px #D1D9E6, inset -2.5px -2.5px 5px #FFFFFF;
+                border-radius: 10px;
+                position: relative;
+                img{
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+        }
+    }
+}
+
+#contact{
+    input, textarea{
+        margin-top: 1em;
+        @include input(2.5px, 5px, 10px);
+    }
+    button{
+        border: none;
+        margin: 0 auto;
+        padding: 0.7em 1em;
+        @include btn(2.5px,5px,10px)
+    }
+}
+
+footer{
+    @include input(2.5px,5px,10px)
 }

@@ -1,7 +1,7 @@
 $background-color:#ECF0F3;
 $font-color:#000000;
 
-@mixin card($shadow, $blur, $border) {
+@mixin card($shadow, $blur, $border,) {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -25,4 +25,17 @@ $font-color:#000000;
     border-radius: $border;
     box-shadow: $shadow $shadow $blur #D1D9E6,
                 $light-shadow $light-shadow $blur #ffffff,
+}
+
+@mixin input($shadow, $blur, $border) {
+    padding: 0.9em 0.8em;
+    border: $background-color;
+    background-color:$background-color;
+    background-clip: border-box;
+    word-wrap: break-word;
+    min-width: 0;
+    $light-shadow:-$shadow;
+    border-radius: $border;
+    box-shadow: $shadow $shadow $blur #D1D9E6 inset,
+                $light-shadow $light-shadow $blur #ffffff inset,
 }
