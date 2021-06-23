@@ -11,6 +11,15 @@
           color: #67a1ff;
           cursor: pointer;
       }
+      .nav-container.off{
+          transform: translateX(-30rem);
+          
+      }
+ }
+ @media (min-width: 768px) { 
+    #hero.w-100{
+        width: 75% !important;
+    }
  }
 
 *{
@@ -30,8 +39,8 @@ body{
 }
 .nav-container{
     position: fixed;
+    z-index: 1;
     width: 352px;
-    // width: calc(100vw - calc(30rem + 40vw));
     height:100vh;
     display: flex;
     flex-direction: column;
@@ -40,6 +49,7 @@ body{
     background-color: #ECF0F3;
     box-shadow: 2.5px 2.5px 5px #D1D9E6 inset,
                 -2.5px -2.5px 5px #ffffff inset;
+                transition: 1s;
     .brand{
         position: absolute;
         top: 3rem;
@@ -58,7 +68,34 @@ body{
         }
     }
 }
-
+.btn-humberger{
+    @include btn(2.5px,5px,10px);
+    padding:0.7em;
+    margin: 0.7em;
+    z-index: 10;
+    img{
+        width: 1.5em;
+        height: auto;
+    }
+}
+.backtotop{
+    @include btn(2.5px,5px,10px);
+    padding:0.7em;
+    margin: 0.7em;
+    bottom: -100rem;
+    right: 0;
+    z-index: 10;
+    img{
+        width: 1.5em;
+        height: auto;
+    }
+    &.on{
+        bottom: 0;
+    }
+}
+footer{
+    @include input(2.5px,5px,10px)
+}
 // content
 #hero{
     background-color: #ECF0F3;
@@ -96,10 +133,8 @@ body{
             align-items: center;
             @include btn(2.5px,5px,10px);
         }
-        
     }
 }
-
 #about-me{
     align-items: center;
     display: flex;
@@ -129,7 +164,6 @@ body{
         }
     }
 }
-
 #skills{
     margin-bottom: 10rem;
     .nav{
@@ -140,7 +174,8 @@ body{
             li{
                 list-style: none;
                 margin-right: 2rem;
-                a{
+                span{
+                    cursor: pointer;
                     width: 106px;
                     height: 33px;
                     display: flex;
@@ -153,18 +188,33 @@ body{
     }
     .content-skills{
         margin-top: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        .learn{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            &.hide {
+                opacity: 0;
+            }
+        }
+        .basic{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            &.hide {
+                opacity: 0;
+            }
+        }
+        
         .skill{
             width: 100px;
             height: 100px;
             margin: 1em 0;
+            padding: 0.5em;
             @include card(2.5px,5px,10px)
         }
     }
+    
 }
-
 #portfolio{
     .list{
         margin-top: 2.3em;
@@ -175,28 +225,73 @@ body{
             margin: 0.5em;
             padding: 1rem;
             @include card(15px,30px,10px);
-            // &:hover{
-            //     // width:100px;
-            // }
             .figure{
                 width: auto;
                 height: 171px;
                 display: flex;
-                padding: 0.5em 0.5em;
                 justify-content: center;
                 align-items: center;
-                box-shadow: inset 2.5px 2.5px 5px #D1D9E6, inset -2.5px -2.5px 5px #FFFFFF;
+                box-shadow: inset 2.5px 2.5px 5px #D1D9E6,
+                             inset -2.5px -2.5px 5px #FFFFFF;
                 border-radius: 10px;
                 position: relative;
                 img{
+                    padding: 7.5px;
                     width: inherit;
                     height: inherit;
+                }
+                .view{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    transition: all 0.5s;
+                    overflow: hidden;
+                    // position: relative;
+                    a{
+                        position: absolute;
+                        bottom: -3rem;
+                        right: 1em;
+                        padding: 0.5em;
+                        @include btn(2.5px,5px,10px);
+                        transition:1s;
+                    }
+                    label{
+                        position: absolute;
+                        top: -3em;
+                        right: 1em;
+                        padding: 0.5em;
+                        @include btn(2.5px,5px,10px);
+                        transition:1s;
+                    }
+                    span{
+                        position: absolute;
+                        bottom: 1em;
+                        left: -4em;
+                        padding: 0.5em;
+                        @include btn(2.5px,5px,10px);
+                        transition:1s;
+                    }
+                }
+                &:hover:only-child{
+                    .view{
+                        background-color:  #ecf0f3a2;
+                        a{
+                            bottom: 1em;
+                        }
+                        label{
+                            top: 0;
+                        }
+                        span{
+                            left: 1em;
+                        }
+                    }
                 }
             }
         }
     }
 }
-
 #contact{
     input, textarea{
         margin-top: 1em;
@@ -208,8 +303,4 @@ body{
         padding: 0.7em 1em;
         @include btn(2.5px,5px,10px)
     }
-}
-
-footer{
-    @include input(2.5px,5px,10px)
 }
