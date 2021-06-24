@@ -96,6 +96,10 @@ body {
           box-shadow: 2.5px 2.5px 5px #D1D9E6, -2.5px -2.5px 5px #ffffff;
 }
 
+.nav-container ul li a img {
+  margin-right: 1em;
+}
+
 .btn-humberger {
   background-color: #ECF0F3;
   color: #000000;
@@ -134,11 +138,13 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: 2.5px 2.5px 5px #D1D9E6, -2.5px -2.5px 5px #ffffff;
           box-shadow: 2.5px 2.5px 5px #D1D9E6, -2.5px -2.5px 5px #ffffff;
-  padding: 0.7em;
+  padding: 0.3em;
   margin: 0.7em;
   bottom: -100rem;
-  right: 0;
+  right: 1em;
   z-index: 10;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .backtotop img {
@@ -147,7 +153,7 @@ body {
 }
 
 .backtotop.on {
-  bottom: 0;
+  bottom: 1rem;
 }
 
 footer {
@@ -505,7 +511,6 @@ footer {
   position: absolute;
   bottom: -3rem;
   right: 1em;
-  padding: 0.5em;
   background-color: #ECF0F3;
   color: #000000;
   -webkit-text-decoration-line: none;
@@ -549,7 +554,6 @@ footer {
   position: absolute;
   bottom: 1em;
   left: -4em;
-  padding: 0.5em;
   background-color: #ECF0F3;
   color: #000000;
   -webkit-text-decoration-line: none;

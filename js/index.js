@@ -41,10 +41,18 @@ linkTo(1)
 linkTo(2)
 linkTo(3)
 linkTo(4)
-let backToTop = document.querySelector('backtotop');
-window.scrollTo((e)=>{
-    console.log(e);
-        backToTop.classList.add('on');
+
+
+let backToTop = document.querySelector('.backtotop');
+
+// console.log(scrollable);
+let scrollable = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+window.onscroll = function() {
+    ((document.documentElement.scrollTop / scrollable) > 0.1) ? backToTop.classList.add('on') : backToTop.classList.remove('on');
+};
+backToTop.addEventListener('click' ,function(){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
 })
-// document.addEventListener('scroll', function(){
-// });

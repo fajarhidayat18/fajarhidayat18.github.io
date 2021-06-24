@@ -64,6 +64,9 @@ body{
             a{
                 padding: 0.5rem 3rem;
                 @include btn(2.5px, 5px, 10px);
+                img{
+                    margin-right: 1em;
+                }
             }
         }
     }
@@ -80,17 +83,18 @@ body{
 }
 .backtotop{
     @include btn(2.5px,5px,10px);
-    padding:0.7em;
+    padding:0.3em;
     margin: 0.7em;
     bottom: -100rem;
-    right: 0;
+    right: 1em;
     z-index: 10;
+    transition: all 1s;
     img{
         width: 1.5em;
         height: auto;
     }
     &.on{
-        bottom: 0;
+        bottom: 1rem;
     }
 }
 footer{
@@ -253,7 +257,7 @@ footer{
                         position: absolute;
                         bottom: -3rem;
                         right: 1em;
-                        padding: 0.5em;
+                        
                         @include btn(2.5px,5px,10px);
                         transition:1s;
                     }
@@ -269,7 +273,7 @@ footer{
                         position: absolute;
                         bottom: 1em;
                         left: -4em;
-                        padding: 0.5em;
+                        
                         @include btn(2.5px,5px,10px);
                         transition:1s;
                     }
