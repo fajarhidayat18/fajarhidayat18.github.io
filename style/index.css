@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -648,10 +648,6 @@ html {
   height: 100%;
 }
 
-.h-1\/2{
-  height: 50%;
-}
-
 .w-12{
   width: 3rem;
 }
@@ -682,38 +678,6 @@ html {
 
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-rows-\[1fr_1fr_1px\]{
-  grid-template-rows: 1fr 1fr 1px;
-}
-
-.grid-rows-\[1fr_1fr_fit-content\]{
-  grid-template-rows: 1fr 1fr fit-content;
-}
-
-.grid-rows-\[1fr_1fr_1rem\]{
-  grid-template-rows: 1fr 1fr 1rem;
-}
-
-.grid-rows-\[1fr_1fr_3rem\]{
-  grid-template-rows: 1fr 1fr 3rem;
-}
-
-.grid-rows-\[1fr_1fr_0\.1fr\]{
-  grid-template-rows: 1fr 1fr 0.1fr;
-}
-
-.grid-rows-\[1fr_0\.5fr_0\.1fr\]{
-  grid-template-rows: 1fr 0.5fr 0.1fr;
-}
-
-.grid-rows-\[1fr_0\.9fr_0\.1fr\]{
-  grid-template-rows: 1fr 0.9fr 0.1fr;
-}
-
-.grid-rows-\[1fr_0\.7fr_0\.1fr\]{
-  grid-template-rows: 1fr 0.7fr 0.1fr;
 }
 
 .grid-rows-\[1fr_0\.1fr_0\.1fr\]{
@@ -762,10 +726,6 @@ html {
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-2{
-  gap: 0.5rem;
 }
 
 .self-end{
@@ -831,14 +791,14 @@ html {
      object-fit: cover;
 }
 
-.object-top{
-  -o-object-position: top;
-     object-position: top;
-}
-
 .object-center{
   -o-object-position: center;
      object-position: center;
+}
+
+.object-top{
+  -o-object-position: top;
+     object-position: top;
 }
 
 .p-4{
