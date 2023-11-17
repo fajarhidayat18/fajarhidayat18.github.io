@@ -680,10 +680,6 @@ html {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-rows-\[1fr_0\.1fr_0\.1fr\]{
   grid-template-rows: 1fr 0.1fr 0.1fr;
 }
