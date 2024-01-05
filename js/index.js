@@ -23,36 +23,3 @@ const learn = () => {
 
 btnLearn.addEventListener('click', learn);
 btnBasic.addEventListener('click', basic);
-
-// toggle navigation
-let btnHumberger = document.querySelector('.humberger');
-let humberger = document.querySelector('.nav-container');
-let linkPage = document.querySelectorAll('.link-page');
-btnHumberger.addEventListener('click', function() {
-     humberger.classList.toggle('off')
-});
-const linkTo = (n) =>{
-    linkPage[n].addEventListener('click', function() {
-        humberger.classList.toggle('off')
-    })
-}
-linkTo(0)
-linkTo(1)
-linkTo(2)
-linkTo(3)
-linkTo(4)
-
-
-let backToTop = document.querySelector('.backtotop');
-
-// console.log(scrollable);
-let scrollable = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-window.onscroll = function() {
-    ((document.documentElement.scrollTop / scrollable) > 0.1) ? backToTop.classList.add('on') : backToTop.classList.remove('on');
-};
-backToTop.addEventListener('click' ,function(){
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-})
